@@ -67,7 +67,8 @@ public class RecommendationResponse {
                     .setName((String) item.get("name"))
                     .setContentHash((String) item.get("content_hash"))
                     .setPhotos(photos)
-                    .setGender(Math.toIntExact((Long) item.get("gender")));
+                    .setGender(Math.toIntExact((Long) item.get("gender")))
+                    .setBio((String) item.get("bio"));
             users.add(recommendedUser);
         }
         return users;
